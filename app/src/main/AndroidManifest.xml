@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dsh.translateoverlay">
+
+    <!-- 调用 DeepSeek 等 API -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 悬浮窗：Android 6+ 需在设置里手动授予「显示在其他应用上层」 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- 前台服务：保证悬浮窗在后台不被系统回收 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Android 13+ 展示前台服务通知；targetSdk 31 下系统默认授予，声明以备用 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TranslateOverlay">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            前台服务承载悬浮窗。targetSdk 31 下无需声明 foregroundServiceType
+            （该属性是 API 34 引入的，compileSdk 31 时不识别）。
+        -->
+        <service
+            android:name=".OverlayService"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

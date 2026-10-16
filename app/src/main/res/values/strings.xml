@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AI 悬浮翻译</string>
+    <string name="subtitle">基于 DeepSeek 大模型的悬浮翻译框\n输入中文，一键译成目标语言，可悬浮在任意应用（含输入法）之上</string>
+
+    <string name="overlay_switch_title">悬浮翻译框</string>
+    <string name="overlay_status_off">未开启</string>
+    <string name="overlay_status_on">已开启，回到桌面或其它应用即可看到悬浮球</string>
+    <string name="overlay_status_need_permission">需要先授予「显示在其他应用上层」权限</string>
+
+    <string name="section_api">大模型配置</string>
+    <string name="hint_api_key">API Key</string>
+    <string name="hint_base_url">Base URL</string>
+    <string name="hint_model">模型名称</string>
+
+    <string name="section_lang">语言设置</string>
+    <string name="hint_source_lang">源语言（auto=自动）</string>
+    <string name="hint_target_lang">目标语言</string>
+    <string name="switch_auto_paste">打开面板时自动读取剪贴板</string>
+
+    <string name="btn_save">保存配置</string>
+    <string name="btn_test">测试连接</string>
+
+    <string name="usage_tips">使用说明\n1. 填好 API Key 后点「保存配置」\n2. 打开上方「悬浮翻译框」开关，按提示授予悬浮窗权限\n3. 屏幕上会出现可拖动的圆形悬浮球，点它展开翻译面板\n4. 在面板里输入中文 → 点「翻译」→ 复制结果粘贴到输入框\n\n提示：悬浮球可以长按拖动到任意位置，会自动记住位置。</string>
+
+    <!-- 悬浮窗内文案 -->
+    <string name="overlay_input_hint">输入要翻译的文字…</string>
+    <string name="overlay_translate">翻译</string>
+    <string name="overlay_copy">复制</string>
+    <string name="overlay_clear">清空</string>
+    <string name="overlay_close">收起</string>
+    <string name="overlay_swap">互换</string>
+    <string name="overlay_copied">已复制到剪贴板</string>
+    <string name="overlay_translating">翻译中…</string>
+    <string name="overlay_ready">就绪</string>
+    <string name="overlay_result_placeholder">翻译结果会显示在这里</string>
+</resources>

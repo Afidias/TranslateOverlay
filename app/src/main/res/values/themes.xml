@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.TranslateOverlay" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">#5B63F5</item>
+        <item name="colorPrimaryVariant">#4A51D8</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#7C86FF</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="android:windowBackground">#12141A</item>
+        <item name="android:statusBarColor" tools:targetApi="l">#12141A</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">#12141A</item>
+    </style>
+
+    <!-- 悬浮面板主题：半透明背景，无标题栏 -->
+    <style name="Theme.TranslateOverlay.Panel" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#5B63F5</item>
+        <item name="colorAccent">#5B63F5</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>
